@@ -1,22 +1,30 @@
 package com.tom.counterwebapp.controller;
 
+import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.stereotype.Controller;
 
 import org.springframework.ui.Model;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.tom.counterwebapp.bean.Student;
+import com.tom.counterwebapp.service.IStudentService;
+
 
 @Controller
+@RequestMapping("/user")  
 public class GeneralController {
 
-@RequestMapping(value="index.do")  
-
-    public void index_jsp(Model model){  
-
-        model.addAttribute("hello", "Hi,SpringMVC");  
-
-        System.out.println("index.jsp");  
-
-    }
+	   @Resource  
+	    private IStudentService studentService;  
+	      
+	    @RequestMapping("/showUser")  
+	    public String toIndex(HttpServletRequest request,Model model) throws Exception{  
+	        Long studentId = Long.parseLong(request.getParameter("id"));  
+	        Student student = this.studentService.selectById(studentId);  
+	        model.addAttribute("student", student);  
+	        return "result";  
+	    }
 }

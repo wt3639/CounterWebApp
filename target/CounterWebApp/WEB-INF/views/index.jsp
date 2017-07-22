@@ -8,6 +8,6 @@
 </head>
 
 <body>
-<c:out value="${hello}"></c:out>
+<c:out value="${student}"></c:out>
 </body>
 </html>
