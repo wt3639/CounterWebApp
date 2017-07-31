@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="6" failures="0" name="com.test.testservice.ServiceTest" time="15.367" errors="0" skipped="0">
+<testsuite tests="6" failures="0" name="com.test.testservice.ServiceTest" time="12.615" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_131\jre\bin"/>
@@ -27,45 +27,48 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="user.variant" value=""/>
     <property name="os.name" value="Windows 10"/>
-    <property name="classworlds.conf" value="C:\Users\c\workspace\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf2848895760910083222.tmp"/>
+    <property name="classworlds.conf" value="C:\Users\c\Downloads\apache-maven-3.5.0-bin\apache-maven-3.5.0\bin\..\bin\m2.conf"/>
     <property name="sun.jnu.encoding" value="GBK"/>
-    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_131\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jre1.8.0_131/bin/server;C:/Program Files/Java/jre1.8.0_131/bin;C:/Program Files/Java/jre1.8.0_131/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Users\c\.dnx\bin;C:\Program Files\Microsoft DNX\Dnvm\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Program Files\Java\jdk1.8.0_131\bin;C:\Users\c\Downloads\sdk-tools-windows-3859397\tools;C:\Program Files\MySQL\MySQL Utilities 1.6\;C:\Users\c\Downloads\apache-maven-3.5.0-bin\apache-maven-3.5.0\bin;C:\program files (x86)\skype\Phone\;C:\Users\c\AppData\Local\Microsoft\WindowsApps;;C:\Users\c\Desktop;;."/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_131\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\system32\config\systemprofile\.dnx\bin;C:\Program Files\Microsoft DNX\Dnvm\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Program Files\Java\jdk1.8.0_131\bin;C:\Users\c\Downloads\sdk-tools-windows-3859397\tools;C:\Program Files\MySQL\MySQL Utilities 1.6\;C:\Users\c\Downloads\apache-maven-3.5.0-bin\apache-maven-3.5.0\bin;C:\program files (x86)\skype\Phone\;C:\Users\c\AppData\Local\Microsoft\WindowsApps;;."/>
+    <property name="maven.conf" value="C:\Users\c\Downloads\apache-maven-3.5.0-bin\apache-maven-3.5.0\bin\../conf"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.class.version" value="52.0"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="os.version" value="10.0"/>
-    <property name="library.jansi.path" value="C:\Users\c\Downloads\apache-maven-3.5.0-bin\apache-maven-3.5.0\lib\jansi-native\windows64"/>
+    <property name="library.jansi.path" value="C:\Users\c\Downloads\apache-maven-3.5.0-bin\apache-maven-3.5.0\bin\..\lib\jansi-native\windows64"/>
     <property name="user.home" value="C:\Users\c"/>
     <property name="user.timezone" value="Asia/Shanghai"/>
     <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
     <property name="java.specification.version" value="1.8"/>
     <property name="file.encoding" value="GBK"/>
     <property name="user.name" value="c"/>
-    <property name="java.class.path" value="C:\Users\c\Downloads\apache-maven-3.5.0-bin\apache-maven-3.5.0\boot\plexus-classworlds-2.5.2.jar"/>
+    <property name="java.class.path" value="C:\Users\c\Downloads\apache-maven-3.5.0-bin\apache-maven-3.5.0\bin\..\boot\plexus-classworlds-2.5.2.jar"/>
     <property name="java.vm.specification.version" value="1.8"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_131\jre"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -B install"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher tomcat7:redeploy"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="zh"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
     <property name="java.vm.info" value="mixed mode"/>
     <property name="java.version" value="1.8.0_131"/>
     <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_131\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext"/>
-    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_131\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_131\lib\ant-javafx.jar;C:\Program Files\Java\jdk1.8.0_131\lib\dt.jar;C:\Program Files\Java\jdk1.8.0_131\lib\javafx-mx.jar;C:\Program Files\Java\jdk1.8.0_131\lib\jconsole.jar;C:\Program Files\Java\jdk1.8.0_131\lib\packager.jar;C:\Program Files\Java\jdk1.8.0_131\lib\sa-jdi.jar;C:\Program Files\Java\jdk1.8.0_131\lib\tools.jar"/>
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_131\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_131\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_131\jre\classes"/>
+    <property name="sun.stderr.encoding" value="ms936"/>
     <property name="java.vendor" value="Oracle Corporation"/>
-    <property name="maven.home" value="C:\Users\c\Downloads\apache-maven-3.5.0-bin\apache-maven-3.5.0"/>
+    <property name="maven.home" value="C:\Users\c\Downloads\apache-maven-3.5.0-bin\apache-maven-3.5.0\bin\.."/>
     <property name="file.separator" value="\"/>
     <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.stdout.encoding" value="ms936"/>
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="com.test.testservice.ServiceTest" name="testSelectByName" time="2.083"/>
-  <testcase classname="com.test.testservice.ServiceTest" name="testSelectByStId" time="3.558"/>
-  <testcase classname="com.test.testservice.ServiceTest" name="testAdd" time="2.793"/>
-  <testcase classname="com.test.testservice.ServiceTest" name="testGet" time="1.772"/>
-  <testcase classname="com.test.testservice.ServiceTest" name="testDelete" time="2.339"/>
-  <testcase classname="com.test.testservice.ServiceTest" name="testUpdate" time="2.822"/>
+  <testcase classname="com.test.testservice.ServiceTest" name="testSelectByName" time="2.347"/>
+  <testcase classname="com.test.testservice.ServiceTest" name="testSelectByStId" time="1.839"/>
+  <testcase classname="com.test.testservice.ServiceTest" name="testAdd" time="2.632"/>
+  <testcase classname="com.test.testservice.ServiceTest" name="testGet" time="2.228"/>
+  <testcase classname="com.test.testservice.ServiceTest" name="testDelete" time="1.873"/>
+  <testcase classname="com.test.testservice.ServiceTest" name="testUpdate" time="1.696"/>
 </testsuite>

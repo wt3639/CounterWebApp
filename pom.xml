@@ -224,8 +224,11 @@
 				<version>2.2</version>
 				<configuration>
 					<path>/CounterWebApp</path>
+					<username>admin</username>    
+					<password>password</password>  
 				</configuration>
 			</plugin>
+			
 		</plugins>
 	</build>
 </project>
