@@ -1,7 +1,31 @@
 package com.tom.counterwebapp.bean;
 
-public class Student {
+import java.io.Serializable;
+
+public class Student implements Serializable {
+	private static final long serialVersionUID = 1L;
+	public Student() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 	private Long id;
+	public Student(Long id, String name, String qq, String type, String enterDate, String school, String stId,
+			String link, String word, String tA, String source, Long update_at, Long create_at) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.qq = qq;
+		this.type = type;
+		this.enterDate = enterDate;
+		this.school = school;
+		this.stId = stId;
+		this.link = link;
+		this.word = word;
+		this.tA = tA;
+		this.source = source;
+		this.update_at = update_at;
+		this.create_at = create_at;
+	}
 	private String name;
 	private String qq;
 	private String type;
@@ -93,9 +117,9 @@ public class Student {
 		this.create_at = create_at;
 	}
 	@Override
-	public String toString(){
-		String info;
-		info = "id:" + this.getId() + " name:" + this.getName() + " school:" + this.getSchool() + " qq:" + this.getQq();
-		return info;
+	public String toString() {
+		return "Student [id=" + id + ", name=" + name + ", qq=" + qq + ", type=" + type + ", enterDate=" + enterDate
+				+ ", school=" + school + ", stId=" + stId + ", link=" + link + ", word=" + word + ", tA=" + tA
+				+ ", source=" + source + ", update_at=" + update_at + ", create_at=" + create_at + "]";
 	}
 }

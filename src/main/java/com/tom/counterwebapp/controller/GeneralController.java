@@ -27,4 +27,20 @@ public class GeneralController {
 	        model.addAttribute("student", student);  
 	        return "result";  
 	    }
+	    
+	    @RequestMapping("/delete")  
+	    public String delete(HttpServletRequest request,Model model) throws Exception{  
+	        Long studentId = Long.parseLong(request.getParameter("id"));  
+	        boolean status = this.studentService.delStudent(studentId);  
+	        model.addAttribute("status", status);  
+	        return "redirect";  
+	    }
+	    
+	    @RequestMapping("/update")  
+	    public String update(Student student,Model model) throws Exception{  
+	        Boolean status = this.studentService.updateStudent(student);  
+	        model.addAttribute("status", status);  
+	        return "redirect";  
+	    }
+	    
 }
