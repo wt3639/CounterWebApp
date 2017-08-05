@@ -26,15 +26,16 @@ year
 运动系数
 <select name="sportIndex" id="sportIndex">
 <option value="1.2">1.2······静坐/无运动</option>
-<option value="1.375">1.375····1~2次/周</option>
-<option value="1.55">1.55·····3~5次/周</option>
-<option value="1.725">1.725····6~7次/周</option>
+<option value="1.375">1.375····1~2次运动/周</option>
+<option value="1.55">1.55·····3~5次运动/周</option>
+<option value="1.725">1.725····6~7次运动/周</option>
 <option value="1.9">1.9······专业运动员/劳力工作者</option>
 </select>
+(无法确切计算消耗的运动，不包括有确切消耗的有氧运动)
 </br>
 有氧消耗
 <input type="text" id="aerobic" name="aerobic" required />
-kcal
+kcal (除广泛运动及无氧运动外的，一天确切消耗的有氧运动消耗，如 跑步、游泳)
 </br>
 增肌
 <input type="radio" id="goalMuscle" checked="checked" name="Goal" value="muscle" />
@@ -44,6 +45,8 @@ kcal
 能量过剩/赤字
 <input type="text" id="energy" name="energy" required/>
 kcal
+</br>
+(建议值： 能量过剩：200~500kcal 能量赤字:500~1000kcal)
 </br>
 <input type="submit" value="提交"/>
 </form>
