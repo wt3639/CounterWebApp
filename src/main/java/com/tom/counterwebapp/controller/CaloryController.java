@@ -17,7 +17,7 @@ public class CaloryController {
 	 @Resource  
 	    private IStudentService studentService;  
 	      
-	    @RequestMapping(value="/submit",method={RequestMethod.POST})  
+	    @RequestMapping(value="/submit",method={RequestMethod.GET})  
 	    public String toIndex(HttpServletRequest request,Model model) throws Exception{  
 	        String sex = request.getParameter("Sex");
 	        String height = request.getParameter("height");
