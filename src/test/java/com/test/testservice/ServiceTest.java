@@ -15,7 +15,7 @@ public class ServiceTest extends BaseTest{
 	
 	@Autowired
 	StudentService studentService;
-	
+	/*
 	@Test
 	 @Transactional    
 	 
@@ -70,5 +70,5 @@ public class ServiceTest extends BaseTest{
 		Student student =studentService.selectByStId("38");
 		Assert.assertEquals("刘佳义", student.getName());
 	}
-
+*/
 }

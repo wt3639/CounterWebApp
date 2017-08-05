@@ -12,7 +12,7 @@ import com.tom.counterwebapp.dao.StudentDAO;
 public class testMybatis extends BaseTest{
 	@Autowired  
 	private StudentDAO studentDAO; 
-
+/*
 	@Test
 	 @Transactional    
 	 
@@ -68,5 +68,5 @@ public class testMybatis extends BaseTest{
 		Student student =studentDAO.selectByStId("38");
 		Assert.assertEquals("刘佳义", student.getName());
 	}
-	
+	*/
 }
