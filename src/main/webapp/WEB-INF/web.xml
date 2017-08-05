@@ -66,7 +66,9 @@
 
 	</filter-mapping>
 
-
+<welcome-file-list>  
+    <welcome-file>calca.html</welcome-file>  
+</welcome-file-list>  
 
 	<!-- Spring view分发器 -->
 
