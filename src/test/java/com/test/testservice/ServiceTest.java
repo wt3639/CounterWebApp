@@ -15,6 +15,11 @@ public class ServiceTest extends BaseTest{
 	
 	@Autowired
 	StudentService studentService;
+	
+	@Test
+	public void test()  {
+		 		
+	}
 	/*
 	@Test
 	 @Transactional    

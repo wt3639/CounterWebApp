@@ -11,7 +11,11 @@ import com.tom.counterwebapp.dao.StudentDAO;
 
 public class testMybatis extends BaseTest{
 	@Autowired  
-	private StudentDAO studentDAO; 
+	private StudentDAO studentDAO;
+	@Test
+	public void test()  {
+		 		
+	}
 /*
 	@Test
 	 @Transactional    
