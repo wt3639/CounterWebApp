@@ -15,7 +15,6 @@
 		<junit.version>4.11</junit.version>
 		<logback.version>1.0.13</logback.version>
 		<jcl-over-slf4j.version>1.7.5</jcl-over-slf4j.version>
-            <maven.tomcat.port>80</maven.tomcat.port>
 	</properties>
 	<dependencies>
 		<!-- Unit Test -->
@@ -225,7 +224,7 @@
 				<version>2.2</version>
 				<configuration>
 					<path>/CounterWebApp</path>
-					<port>${tomcat.http.port}</port>
+					<maven.tomcat.port>80</maven.tomcat.port>
 					<username>admin</username>    
 					<password>password</password>  
 				</configuration>
