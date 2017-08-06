@@ -224,6 +224,7 @@
 				<version>2.2</version>
 				<configuration>
 				    <url>http://localhost:80/CounterWebApp</url>  
+					<path>/CounterWebApp</path>
 					<username>admin</username>    
 					<password>password</password>  
 				</configuration>
