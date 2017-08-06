@@ -224,6 +224,7 @@
 				<version>2.2</version>
 				<configuration>
 					<path>/CounterWebApp</path>
+					<port>${tomcat.http.port}</port>
 					<username>admin</username>    
 					<password>password</password>  
 				</configuration>
