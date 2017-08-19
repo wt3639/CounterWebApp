@@ -53,13 +53,13 @@ public class CaloryController {
 	            if(goal.equals("muscle")){
 	                 need = ( total + Integer.parseInt(energy));
 	                 prot =(int) ( 2.2 * Integer.parseInt(weight));
-	                 fat =  (int) (need * 0.25 / 8 );
-	                 cab =  ((need - prot*4 -fat*8)/4);
+	                 fat =  (int) (need * 0.25 / 9 );
+	                 cab =  ((need - prot*4 -fat*9)/4);
 	            }else{
 	                 need =  ( total - Integer.parseInt(energy));
 	                 prot = (int) ( 2.75 * Integer.parseInt(weight));
-	                 fat = (int) ( need * 0.2 / 8) ;
-	                 cab =  ((need - prot*4 -fat*8)/4);
+	                 fat = (int) ( need * 0.2 / 9) ;
+	                 cab =  ((need - prot*4 -fat*9)/4);
 	               }                
 	          	        
 	        model.addAttribute("basic", basic); 
