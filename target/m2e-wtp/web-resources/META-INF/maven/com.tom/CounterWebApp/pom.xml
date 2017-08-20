@@ -224,7 +224,7 @@
 				<version>2.2</version>
 				<configuration>
 					<path>/CounterWebApp</path>
-					<username>admin</username>    
+					<username>adm</username>    
 					<password>password</password>  
 				</configuration>
 			</plugin>
