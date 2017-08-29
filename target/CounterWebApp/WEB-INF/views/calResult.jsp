@@ -35,7 +35,7 @@ g
 <br>
 我在微信小程序上也做了一个类似的应用欢迎使用
 <br/>
-名字叫 热量摄入计算器
-<img src="../../resources/lego.jpg"  />
+名字叫 热量摄入计算器<br>
+<img src="../lego.jpg"  />
 </body>
 </html>
