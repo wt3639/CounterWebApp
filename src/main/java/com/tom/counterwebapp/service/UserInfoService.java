@@ -34,12 +34,12 @@ public class UserInfoService implements IUserInfoService{
 	}
 
 	@Override
-	public UserInfo selectByOpenid(Long openid) throws Exception {
+	public UserInfo selectByOpenid(String openid) throws Exception {
 		UserInfo ui = uiDAO.get(openid);
 		return ui;
 	}
 	
-	public boolean delUser(Long openid) throws Exception{
+	public boolean delUser(String openid) throws Exception{
 		int result = uiDAO.delUser(openid);
 		if(result>0)
 			return true;

@@ -1,17 +1,30 @@
 package com.tom.counterwebapp.controller;
 
+import java.io.FileReader;
+
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.util.LinkedMultiValueMap;
+import org.springframework.util.MultiValueMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.client.RestTemplate;
 
+import com.tom.counterwebapp.bean.OpenidJson;
 import com.tom.counterwebapp.bean.RespondResult;
 import com.tom.counterwebapp.bean.UserInfo;
 import com.tom.counterwebapp.service.IUserInfoService;
+
+import net.sf.json.JSONObject;
 
 @Controller
 @RequestMapping("/calory")  
@@ -31,11 +44,7 @@ public class CaloryController {
 	        String goals = request.getParameter("goals");
 	        String energy = request.getParameter("energy");
 	        UserInfo ui = new UserInfo();
-	        if(openid==null) {
-	        	ui.setOpenid(new Double(Math.random()*100000).longValue());
-	        }else {
-	        	ui.setOpenid(Long.parseLong(openid));
-	        }
+	       ui.setOpenid(String.valueOf(Math.random()*100000));
 	        ui.setSex(sex);
 	        ui.setHeight(Integer.parseInt(height));
 	        ui.setWeight(Integer.parseInt(weight));
@@ -80,11 +89,14 @@ public class CaloryController {
 	        return "calResult";  
 	    }
 	    
+	  
+	    
 	    @RequestMapping(value="/getjson",method={RequestMethod.GET})  
 	    @ResponseBody
 	    public RespondResult toJson(HttpServletRequest request) throws Exception{  
 	    	RespondResult rr = new RespondResult();
 	    	String openid = request.getParameter("openid");
+	    	String nickname = request.getParameter("nickname");
 	        String sex = request.getParameter("sex");
 	        String height = request.getParameter("height");
 	        String weight = request.getParameter("weight");
@@ -93,12 +105,9 @@ public class CaloryController {
 	        String aerobic = request.getParameter("aerobic");
 	        String goals = request.getParameter("goals");
 	        String energy = request.getParameter("energy");
-	        UserInfo ui = new UserInfo();
-	        if(openid==null) {
-	        	ui.setOpenid(new Double(Math.random()*100000).longValue());
-	        }else {
-	        	ui.setOpenid(Long.parseLong(openid));
-	        }
+	        UserInfo ui = new UserInfo();	                
+	        ui.setOpenid(openid);
+	        ui.setNickname(nickname);
 	        ui.setSex(sex);
 	        ui.setHeight(Integer.parseInt(height));
 	        ui.setWeight(Integer.parseInt(weight));
@@ -140,4 +149,39 @@ public class CaloryController {
 	        rr.setTotal(total);
 	        return rr;  
 	    }
+	    
+	    
+	    @RequestMapping(value="/getOpenid",method={RequestMethod.GET})  
+	    @ResponseBody
+	    public String toOpenid(HttpServletRequest request) throws Exception{  
+	    	String ucode = request.getParameter("ucode");
+	    	RestTemplate restTemplate=new RestTemplate();
+	        String appid="wxbada8bbe7db00ca6";//appid需自己提供，此处的appid我随机编写  
+	        String secret = "c871e2321371599cf9db00683d9376a6";//secret需自己提供，此处的secret我随机编写  
+	        String url="https://api.weixin.qq.com/sns/jscode2session?appid="+appid+"&secret="+secret+"&js_code="+ucode+"&grant_type=authorization_code";
+	        /* 注意：必须 http、https……开头，不然报错，浏览器地址栏不加 http 之类不出错是因为浏览器自动帮你补全了 */
+	        HttpHeaders headers = new HttpHeaders();
+	        /* 这个对象有add()方法，可往请求头存入信息 */       
+	        headers.setContentType(MediaType.APPLICATION_JSON);
+	        /* 解决中文乱码的关键 , 还有更深层次的问题 关系到 StringHttpMessageConverter，先占位，以后补全*/ 
+	        HttpEntity<String> entity = new HttpEntity<String>(headers);
+	        /* body是Http消息体例如json串 */ 
+	        //OpenidJson oj = new OpenidJson();
+	        //restTemplate.getForObject(url, OpenidJson.class, oj);
+	        ResponseEntity<String> re = restTemplate.exchange(url, HttpMethod.GET, entity, String.class);
+	        /*上面这句返回的是往 url发送 post请求 请求携带信息为entity时返回的结果信息
+	        String.class 是可以修改的，例如User.class，这样你就可以有 User resultUser接返回结果了*/
+	        
+	      //定义两种不同格式的字符串
+	        String objectStr=re.getBody();
+	        //1、使用JSONObject
+	        JSONObject jsonObject=JSONObject.fromObject(objectStr);
+	        OpenidJson oj=(OpenidJson)JSONObject.toBean(jsonObject, OpenidJson.class);
+	        //获得jsonArray的第一个元素
+	        //System.out.println("stu:"+oj);
+	        return oj.getOpenid();
+	    }
+	    
 }
+
+

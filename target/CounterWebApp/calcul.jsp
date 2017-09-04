@@ -9,7 +9,7 @@
 <body>
 <form name="info" action="/CounterWebApp/calory/submit" method="get" >
 男性
-<input type="radio" id="sexMale" checked="checked" name="Sex" value="male" />
+<input type="radio" id="sexMale" checked="checked" name="sex" value="male" />
 女性
 <input type="radio" name="sex" id="sexFemale" value="female" />
 </br>
@@ -26,7 +26,7 @@ kg
 year
 </br>
 运动系数
-<select name="sportIndex" id="sportIndex">
+<select name="sportindex" id="sportindex">
 <option value="1.2">1.2······静坐/无运动</option>
 <option value="1.375">1.375····1~2次运动/周</option>
 <option value="1.55">1.55·····3~5次运动/周</option>
@@ -40,7 +40,7 @@ year
 kcal (除广泛运动及无氧运动外的，一天确切消耗的有氧运动消耗，如 跑步、游泳)
 </br>
 增肌
-<input type="radio" id="goalMuscle" checked="checked" name="Goal" value="muscle" />
+<input type="radio" id="goalMuscle" checked="checked" name="goals" value="muscle" />
 减脂
 <input type="radio" id="goalFat" name="goals" value="fat" />
 </br>

@@ -4,8 +4,12 @@ import java.io.Serializable;
 
 public class UserInfo implements Serializable  {
 	private static final long serialVersionUID = 1L;
-	private Long openid;
+	private String openid;
+	public void setOpenid(String openid) {
+		this.openid = openid;
+	}
 	private String sex;
+	private String nickname;
 	private Integer height;
 	private Integer weight;
 	private Integer age;
@@ -16,11 +20,17 @@ public class UserInfo implements Serializable  {
 	private Long update_at;
 	private Long create_at;
 	
-	public UserInfo(Long openid, String sex, Integer height, Integer weight, Integer age, Float sportIndex,
-			Integer aerobic, String goals, Integer energy, Long update_at, Long create_at) {
+
+	
+
+
+
+	public UserInfo(String openid, String sex, String nickname, Integer height, Integer weight, Integer age,
+			Float sportIndex, Integer aerobic, String goals, Integer energy, Long update_at, Long create_at) {
 		super();
 		this.openid = openid;
 		this.sex = sex;
+		this.nickname = nickname;
 		this.height = height;
 		this.weight = weight;
 		this.age = age;
@@ -31,16 +41,21 @@ public class UserInfo implements Serializable  {
 		this.update_at = update_at;
 		this.create_at = create_at;
 	}
-	
+
+	public String getOpenid() {
+		return openid;
+	}
+
 	public UserInfo() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Long getOpenid() {
-		return openid;
+	public String getNickname() {
+		return nickname;
 	}
-	public void setOpenid(Long openid) {
-		this.openid = openid;
+
+	public void setNickname(String nickname) {
+		this.nickname = nickname;
 	}
 	public String getSex() {
 		return sex;

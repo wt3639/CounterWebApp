@@ -9,9 +9,9 @@ public interface UserInfoDAO {
 
 	public int updateUser(UserInfo ui) throws Exception;
 	
-	public UserInfo get(Long openid) throws Exception;
+	public UserInfo get(String openid) throws Exception;
 	
-	public int delUser(Long openid) throws Exception;
+	public int delUser(String openid) throws Exception;
 	
     public List<UserInfo> query() throws Exception ;
 	

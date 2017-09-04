@@ -3,6 +3,7 @@ package com.tom.counterwebapp.bean;
 import java.io.Serializable;
 
 public class RespondResult implements Serializable {
+	private static final long serialVersionUID = 1L;
 	  private int basic; 
 	  private int total; 
 	  private int need; 
