@@ -19,8 +19,8 @@
         
         <property name="dataSource" ref="dataSource">
     </property></bean>
-  <bean id="studentService"
-       class="com.tom.counterwebapp.service.StudentService">
+  <bean id="UserInfoService"
+       class="com.tom.counterwebapp.service.UserInfoService">
    </bean>
 
 </beans>

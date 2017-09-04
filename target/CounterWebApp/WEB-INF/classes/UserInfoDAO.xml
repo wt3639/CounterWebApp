@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tom.counterwebapp.dao.UserInfoDAO">
+  
+  <select id="get" parameterType="long" resultType="com.tom.counterwebapp.bean.UserInfo">
+    select * from calories where openid = #{openid}
+  </select>
+  
+  <select id="query" resultType="com.tom.counterwebapp.bean.UserInfo">
+  select *
+  from calories
+</select>
+  
+  <insert id="addUser" parameterType="com.tom.counterwebapp.bean.UserInfo" useGeneratedKeys="true" keyProperty="openid">
+  insert into calories (openid,sex,height,weight,age,sportindex,aerobic,goals,energy,update_at,create_at) 
+  values(#{openid},#{sex},#{height},#{weight},#{age},#{sportindex},#{aerobic},
+  #{goals},#{energy},unix_timestamp(now()),unix_timestamp(now()))
+</insert>
+
+<update id="updateUser" parameterType="com.tom.counterwebapp.bean.UserInfo">
+  update calories set
+    sex=#{sex},
+    height=#{height},
+    weight=#{weight},
+    age=#{age},
+    sportindex=#{sportindex},
+    aerobic=#{aerobic},
+    goals=#{goals},
+    energy=#{energy},
+    update_at=unix_timestamp(now()),
+    create_at=#{create_at}
+  where openid = #{openid}
+</update>
+
+<delete id="delUser" parameterType="long">
+  delete from calories where openid = #{openid}
+</delete>
+  
+</mapper>

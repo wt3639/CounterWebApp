@@ -1,17 +1,13 @@
 package com.test.testmybatis;
 
-import org.junit.Assert;
 import org.junit.Test;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.transaction.annotation.Transactional;
-import com.test.basetest.BaseTest;
-import com.tom.counterwebapp.bean.Student;
-import com.tom.counterwebapp.dao.StudentDAO;
+
+import com.test.basetest.BaseTest;;
+
 
 
 public class testMybatis extends BaseTest{
-	@Autowired  
-	private StudentDAO studentDAO;
+	
 	@Test
 	public void test()  {
 		 		

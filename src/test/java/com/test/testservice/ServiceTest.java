@@ -6,15 +6,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.test.basetest.BaseTest;
-import com.tom.counterwebapp.bean.Student;
-import com.tom.counterwebapp.service.StudentService;
-
 
 
 public class ServiceTest extends BaseTest{
 	
-	@Autowired
-	StudentService studentService;
+	
 	
 	@Test
 	public void test()  {

@@ -1,6 +1,8 @@
 package com.tom.counterwebapp.bean;
 
-public class RespondResult {
+import java.io.Serializable;
+
+public class RespondResult implements Serializable {
 	  private int basic; 
 	  private int total; 
 	  private int need; 

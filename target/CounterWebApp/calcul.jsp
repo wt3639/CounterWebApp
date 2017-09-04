@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+<%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -11,7 +11,7 @@
 男性
 <input type="radio" id="sexMale" checked="checked" name="Sex" value="male" />
 女性
-<input type="radio" name="Sex" id="sexFemale" value="female" />
+<input type="radio" name="sex" id="sexFemale" value="female" />
 </br>
 身高
 <input type="text" id="height" name="height" onkeypress="return event.keyCode>=48&&event.keyCode<=57" ng-pattern="/[^a-zA-Z]/" style="ime-mode:Disabled" required />
@@ -42,7 +42,7 @@ kcal (除广泛运动及无氧运动外的，一天确切消耗的有氧运动�
 增肌
 <input type="radio" id="goalMuscle" checked="checked" name="Goal" value="muscle" />
 减脂
-<input type="radio" id="goalFat" name="Goal" value="fat" />
+<input type="radio" id="goalFat" name="goals" value="fat" />
 </br>
 能量过剩/赤字
 <input type="text" id="energy" name="energy" onkeypress="return event.keyCode>=48&&event.keyCode<=57" ng-pattern="/[^a-zA-Z]/" style="ime-mode:Disabled" required/>
