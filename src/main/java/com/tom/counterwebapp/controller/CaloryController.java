@@ -44,7 +44,7 @@ public class CaloryController {
 	        String goals = request.getParameter("goals");
 	        String energy = request.getParameter("energy");
 	        UserInfo ui = new UserInfo();
-	       ui.setOpenid(String.valueOf(Math.random()*100000));
+	        ui.setOpenid(String.valueOf((int)Math.random()*1000000));
 	        ui.setSex(sex);
 	        ui.setHeight(Integer.parseInt(height));
 	        ui.setWeight(Integer.parseInt(weight));
