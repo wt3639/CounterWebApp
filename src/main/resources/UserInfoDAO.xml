@@ -30,8 +30,7 @@
     aerobic=#{aerobic},
     goals=#{goals},
     energy=#{energy},
-    update_at=unix_timestamp(now()),
-    create_at=#{create_at}
+    update_at=unix_timestamp(now())
   where openid = #{openid}
 </update>
 
