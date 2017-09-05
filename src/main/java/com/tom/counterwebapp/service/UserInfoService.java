@@ -51,5 +51,15 @@ public class UserInfoService implements IUserInfoService{
     	List<UserInfo> ls = uiDAO.query();
     	return ls;
     }
+    @Override
+	public boolean userExist(String openid) throws Exception {
+		// TODO Auto-generated method stub
+    	UserInfo ui  = uiDAO.get(openid);
+    	if(ui==null) {
+    		return false;
+    	}else {
+		return true;
+    	}
+	}
 
 }

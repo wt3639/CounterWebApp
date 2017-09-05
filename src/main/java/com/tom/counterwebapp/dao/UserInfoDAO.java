@@ -14,5 +14,5 @@ public interface UserInfoDAO {
 	public int delUser(String openid) throws Exception;
 	
     public List<UserInfo> query() throws Exception ;
-	
+    
 }

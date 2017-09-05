@@ -13,6 +13,7 @@
   from calories
 </select>
   
+  
   <insert id="addUser" parameterType="com.tom.counterwebapp.bean.UserInfo" useGeneratedKeys="true" keyProperty="openid">
   insert into calories (openid,nickname,sex,height,weight,age,sportindex,aerobic,goals,energy,update_at,create_at) 
   values(#{openid},#{nickname},#{sex},#{height},#{weight},#{age},#{sportIndex},#{aerobic},
