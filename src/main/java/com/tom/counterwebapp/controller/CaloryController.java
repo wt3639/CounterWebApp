@@ -105,9 +105,11 @@ public class CaloryController {
 	        String aerobic = request.getParameter("aerobic");
 	        String goals = request.getParameter("goals");
 	        String energy = request.getParameter("energy");
-	        UserInfo ui = new UserInfo();	                
+	        UserInfo ui = new UserInfo();	
+	        String decodenickname = new String(nickname.getBytes("ISO-8859-1"),"UTF-8");
+	       // String decodenickname = new String("你好呀".getBytes("UTF-8"),"ISO-8859-1");
 	        ui.setOpenid(openid);
-	        ui.setNickname(nickname);
+	        ui.setNickname(decodenickname);
 	        ui.setSex(sex);
 	        ui.setHeight(Integer.parseInt(height));
 	        ui.setWeight(Integer.parseInt(weight));
