@@ -26,7 +26,7 @@
     height=#{height},
     weight=#{weight},
     age=#{age},
-    sportindex=#{sportindex},
+    sportindex=#{sportIndex},
     aerobic=#{aerobic},
     goals=#{goals},
     energy=#{energy},
