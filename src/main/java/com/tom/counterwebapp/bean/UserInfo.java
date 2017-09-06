@@ -10,6 +10,7 @@ public class UserInfo implements Serializable  {
 	}
 	private String sex;
 	private String nickname;
+	private String region;
 	private Integer height;
 	private Integer weight;
 	private Integer age;
@@ -25,12 +26,14 @@ public class UserInfo implements Serializable  {
 
 
 
-	public UserInfo(String openid, String sex, String nickname, Integer height, Integer weight, Integer age,
-			Float sportIndex, Integer aerobic, String goals, Integer energy, Long update_at, Long create_at) {
+	public UserInfo(String openid, String sex, String nickname, String region, Integer height, Integer weight,
+			Integer age, Float sportIndex, Integer aerobic, String goals, Integer energy, Long update_at,
+			Long create_at) {
 		super();
 		this.openid = openid;
 		this.sex = sex;
 		this.nickname = nickname;
+		this.region = region;
 		this.height = height;
 		this.weight = weight;
 		this.age = age;
@@ -41,6 +44,17 @@ public class UserInfo implements Serializable  {
 		this.update_at = update_at;
 		this.create_at = create_at;
 	}
+
+
+	public String getRegion() {
+		return region;
+	}
+
+
+	public void setRegion(String region) {
+		this.region = region;
+	}
+
 
 	public String getOpenid() {
 		return openid;
@@ -120,11 +134,14 @@ public class UserInfo implements Serializable  {
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
+
+
 	@Override
 	public String toString() {
-		return "UserInfo [openid=" + openid + ", sex=" + sex + ", height=" + height + ", weight=" + weight + ", age="
-				+ age + ", sportIndex=" + sportIndex + ", aerobic=" + aerobic + ", goals=" + goals + ", energy="
-				+ energy + ", update_at=" + update_at + ", create_at=" + create_at + "]";
+		return "UserInfo [openid=" + openid + ", sex=" + sex + ", nickname=" + nickname + ", region=" + region
+				+ ", height=" + height + ", weight=" + weight + ", age=" + age + ", sportIndex=" + sportIndex
+				+ ", aerobic=" + aerobic + ", goals=" + goals + ", energy=" + energy + ", update_at=" + update_at
+				+ ", create_at=" + create_at + "]";
 	}
-
+	
 }

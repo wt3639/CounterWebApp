@@ -97,6 +97,7 @@ public class CaloryController {
 	    	RespondResult rr = new RespondResult();
 	    	String openid = request.getParameter("openid");
 	    	String nickname = request.getParameter("nickname");
+	    	String region = request.getParameter("region");
 	        String sex = request.getParameter("sex");
 	        String height = request.getParameter("height");
 	        String weight = request.getParameter("weight");
@@ -110,6 +111,7 @@ public class CaloryController {
 	       // String decodenickname = new String("你好呀".getBytes("UTF-8"),"ISO-8859-1");
 	        ui.setOpenid(openid);
 	        ui.setNickname(decodenickname);
+	        ui.setRegion(region);
 	        ui.setSex(sex);
 	        ui.setHeight(Integer.parseInt(height));
 	        ui.setWeight(Integer.parseInt(weight));
