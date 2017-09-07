@@ -249,7 +249,7 @@
 				<configuration>
 					<path>/CounterWebApp</path>
 					<username>user1</username>    
-					<password>password</password>  
+					<password>Tomcat_123456</password>  
 				</configuration>
 			</plugin>
 			
