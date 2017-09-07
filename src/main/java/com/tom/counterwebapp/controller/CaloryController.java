@@ -34,7 +34,6 @@ public class CaloryController {
 	      
 	    @RequestMapping(value="/submit",method={RequestMethod.GET})  
 	    public String toIndex(HttpServletRequest request,Model model) throws Exception{ 
-	    	String openid = request.getParameter("openid");
 	        String sex = request.getParameter("sex");
 	        String height = request.getParameter("height");
 	        String weight = request.getParameter("weight");
@@ -44,7 +43,9 @@ public class CaloryController {
 	        String goals = request.getParameter("goals");
 	        String energy = request.getParameter("energy");
 	        UserInfo ui = new UserInfo();
-	        ui.setOpenid(String.valueOf((int)Math.random()*1000000));
+	        ui.setOpenid("website"+(int)(Math.random()*1000000000));
+	        ui.setNickname("none");
+	        ui.setRegion("unknown");
 	        ui.setSex(sex);
 	        ui.setHeight(Integer.parseInt(height));
 	        ui.setWeight(Integer.parseInt(weight));

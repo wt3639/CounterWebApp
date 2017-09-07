@@ -13,24 +13,26 @@
   from calories
 </select>
   
+  
   <insert id="addUser" parameterType="com.tom.counterwebapp.bean.UserInfo" useGeneratedKeys="true" keyProperty="openid">
-  insert into calories (openid,nickname,sex,height,weight,age,sportindex,aerobic,goals,energy,update_at,create_at) 
-  values(#{openid},#{nickname},#{sex},#{height},#{weight},#{age},#{sportIndex},#{aerobic},
+  insert into calories (openid,nickname,region,sex,height,weight,age,sportindex,aerobic,goals,energy,update_at,create_at) 
+  values(#{openid},#{nickname},#{region},#{sex},#{height},#{weight},#{age},#{sportIndex},#{aerobic},
   #{goals},#{energy},unix_timestamp(now()),unix_timestamp(now()))
 </insert>
 
 <update id="updateUser" parameterType="com.tom.counterwebapp.bean.UserInfo">
   update calories set
+  	nickname = #{nickname},
+  	region = #{region},
     sex=#{sex},
     height=#{height},
     weight=#{weight},
     age=#{age},
-    sportindex=#{sportindex},
+    sportindex=#{sportIndex},
     aerobic=#{aerobic},
     goals=#{goals},
     energy=#{energy},
-    update_at=unix_timestamp(now()),
-    create_at=#{create_at}
+    update_at=unix_timestamp(now())
   where openid = #{openid}
 </update>
 

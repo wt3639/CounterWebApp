@@ -5,9 +5,6 @@ import java.io.Serializable;
 public class UserInfo implements Serializable  {
 	private static final long serialVersionUID = 1L;
 	private String openid;
-	public void setOpenid(String openid) {
-		this.openid = openid;
-	}
 	private String sex;
 	private String nickname;
 	private String region;
@@ -55,7 +52,10 @@ public class UserInfo implements Serializable  {
 		this.region = region;
 	}
 
-
+	public void setOpenid(String openid) {
+		this.openid = openid;
+	}
+	
 	public String getOpenid() {
 		return openid;
 	}
