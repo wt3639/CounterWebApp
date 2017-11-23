@@ -7,6 +7,8 @@
 <title>Calorie Calculator</title>
 </head>
 <body>
+
+
 <form name="info" action="/CounterWebApp/calory/submit" method="get" >
 男性
 <input type="radio" id="sexMale" checked="checked" name="sex" value="male" />

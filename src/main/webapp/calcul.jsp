@@ -53,6 +53,9 @@ kcal
 <input type="submit" value="提交"/>
 </form>
 <br>
+<a href="https://uland.taobao.com/coupon/edetail?e=mo4wfY9z6fEN%2BoQUE6FNzMBciSoWL%2BGzZfos4Ybau634%2ByK5EJCmBlecV8nS7f3JmZYyPiaATWOZ7n51fPTC38nFXC3XWYmcoUC34ijeiBvqKeiS2V8kn4qXw8yOdMxCvVujDFG3BRbo5MGGkqkhzCzwSWJjq%2BDtHcN5QxAaxvo%3D&pid=mm_13636843_11288413_39966831&af=1" target="_blank">点击领券购买即食鸡胸肉，增肌减脂不是梦！</a>
+<br>
+<br>
 我在微信小程序上也做了一个类似的应用欢迎使用
 <br/>
 名字叫 热量摄入计算器<br>
