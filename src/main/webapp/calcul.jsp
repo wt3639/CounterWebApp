@@ -64,10 +64,10 @@ kcal
 </form>
 <br>
 
-<a href="https://uland.taobao.com/coupon/edetail?e=ahPPLnZbAc8N%2BoQUE6FNzMBciSoWL%2BGzZfos4Ybau634%2ByK5EJCmBlecV8nS7f3JJeBhbpkUYMK9LiSY9QsJ1snFXC3XWYmcoUC34ijeiBvqKeiS2V8kn5cyqJZBxrw5gEHqhejgyJGXSiFVJTl3kus5kRbsQAGb2lHRRnS20LU%3D&pid=mm_13636843_11288413_39966831&af=1" target="_blank">
+<a href="https://s.click.taobao.com/t?e=m%3D2%26s%3Dad5L09RxJgMcQipKwQzePOeEDrYVVa64LKpWJ%2Bin0XLjf2vlNIV67ugYC5em%2F54BtTN3K9waqqi4GH6HVdMx%2FWtWeZl7FJklBdWxfnj%2BreaBTYCbwLzTPFgTPJ9MUNmKTDSQvcCaVEfmAClNJkpsC1b%2BaLjFfQNt%2BCYs4zVhARw%3D&pvid=10_121.35.180.236_584_1513048639919" target="_blank">
 <img src="chi.jpg" height="200px" width="200px" alt="chi"  />
 <br>
-蛋白质吃不够谁来凑？点击领券购买即食鸡胸肉，增肌减脂不是梦！
+蛋白质吃不够谁来凑？点击购买即食鸡胸肉，增肌减脂不是梦！
 </a>
 <br>
 <br>
