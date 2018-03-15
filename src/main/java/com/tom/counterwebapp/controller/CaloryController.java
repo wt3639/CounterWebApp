@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.client.RestTemplate;
 
+import com.tom.counterwebapp.bean.Advertisement;
 import com.tom.counterwebapp.bean.OpenidJson;
 import com.tom.counterwebapp.bean.RespondResult;
 import com.tom.counterwebapp.bean.UserInfo;
@@ -190,6 +191,19 @@ public class CaloryController {
 	        //获得jsonArray的第一个元素
 	        //System.out.println("stu:"+oj);
 	        return oj.getOpenid();
+	    }
+	    
+	    @RequestMapping(value="/getAd",method={RequestMethod.GET})  
+	    @ResponseBody
+	    public Advertisement toAd(HttpServletRequest request) throws Exception{  
+	    	Advertisement advertisement = new Advertisement();
+	    	String id = request.getParameter("id");
+	    	Advertisement ad2 = uiService.getAd(id);
+	    	advertisement.setId(id);
+	    	advertisement.setUpdateFlag(ad2.getUpdateFlag());
+	    	advertisement.setText(ad2.getText());
+	    	return advertisement;
+	    	
 	    }
 	    
 }

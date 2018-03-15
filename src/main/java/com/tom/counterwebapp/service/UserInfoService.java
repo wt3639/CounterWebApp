@@ -5,9 +5,11 @@ import java.util.List;
 import javax.annotation.Resource;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cglib.transform.AbstractClassLoader;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.tom.counterwebapp.bean.Advertisement;
 import com.tom.counterwebapp.bean.UserInfo;
 import com.tom.counterwebapp.dao.UserInfoDAO;
 
@@ -62,4 +64,10 @@ public class UserInfoService implements IUserInfoService{
     	}
 	}
 
+    
+    @Override
+	public Advertisement getAd(String id) throws Exception {
+		Advertisement ad = uiDAO.getAd(id);
+		return ad;
+	}
 }

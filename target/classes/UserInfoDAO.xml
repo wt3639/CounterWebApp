@@ -40,4 +40,8 @@
   delete from calories where openid = #{openid}
 </delete>
   
+  <select id="getAd" parameterType="string" resultType="com.tom.counterwebapp.bean.Advertisement">
+    select * from advertisement where id = #{id}
+  </select>
+  
 </mapper>

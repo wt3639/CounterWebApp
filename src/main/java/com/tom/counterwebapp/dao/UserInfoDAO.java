@@ -2,6 +2,7 @@ package com.tom.counterwebapp.dao;
 
 import java.util.List;
 
+import com.tom.counterwebapp.bean.Advertisement;
 import com.tom.counterwebapp.bean.UserInfo;
 
 public interface UserInfoDAO {
@@ -15,4 +16,5 @@ public interface UserInfoDAO {
 	
     public List<UserInfo> query() throws Exception ;
     
+    public Advertisement getAd(String id) throws Exception;
 }
