@@ -22,8 +22,30 @@
   });
 </script>
 </head>
+<style  type="text/css">
+.firstRow {
+    display:flex;
+    flex-direction:row;
+}
+
+.formDiv{
+	width:700px;
+}
+.form{
+line-height:30px;
+}
+.wechatApp{
+	
+}
+.ad{
+	
+}
+</style>
 <body>
-<form name="info" action="/CounterWebApp/calory/submit" method="get" >
+<div class="mainDiv" >
+<div class="firstRow">
+<div class="formDiv">
+<form name="info" action="/CounterWebApp/calory/submit" method="get" class="form">
 男性
 <input type="radio" id="sexMale" checked="checked" name="sex" value="male" />
 女性
@@ -49,11 +71,12 @@ year
 <option value="1.725">1.725····6~7次运动/周</option>
 <option value="1.9">1.9······专业运动员/劳力工作者</option>
 </select>
+</br>
 (无法确切计算消耗的运动，不包括有确切消耗的有氧运动)
 </br>
 有氧消耗
 <input type="text" id="aerobic" name="aerobic" onkeypress="return event.keyCode>=48&&event.keyCode<=57" ng-pattern="/[^a-zA-Z]/" style="ime-mode:Disabled" required />
-kcal (除广泛运动及无氧运动外的，一天确切消耗的有氧运动消耗，如 跑步、游泳)
+kcal</br> (除广泛运动及无氧运动外的，一天确切消耗的有氧运动消耗，如 跑步、游泳)
 </br>
 增肌
 <input type="radio" id="goalMuscle" checked="checked" name="goals" value="muscle" />
@@ -68,19 +91,23 @@ kcal
 </br>
 <input type="submit" value="提交"/>
 </form>
-
+<div class="ad">
+<a href="https://s.click.taobao.com/t?e=m%3D2%26s%3DT71%2Bv9ohAfIcQipKwQzePOeEDrYVVa64K7Vc7tFgwiHjf2vlNIV67ib7JhStDaHtLzKPa%2Ff2nu%2B4GH6HVdMx%2FWtWeZl7FJklBdWxfnj%2Brebw%2FEAwgoPDdMSBZxvVooRLv2y1yjuHRXzexejUGDlr%2Ft%2BLIjw8oQPvxg5p7bh%2BFbQ%3D&pvid=10_61.144.173.32_459_1521863701855" target="_blank">
+蛋白质吃不够怎么办？点击购买MyProtein蛋白粉！
 <br>
-我在微信小程序上也做了一个类似的应用欢迎使用
-<br/>
+<img src="chi.jpg" height="200px" width="200px" alt="chi"  />
+
+</a>
+<br>
+</div>
+</div>
+<div class="wechatApp">
+我在微信小程序上也做了一个类似的应用欢迎使用</br>
 名字叫 热量摄入计算器<br>
 <img src="lego.jpg" alt="logo"  />
 <br>
-
-<a href="https://s.click.taobao.com/t?e=m%3D2%26s%3DT71%2Bv9ohAfIcQipKwQzePOeEDrYVVa64K7Vc7tFgwiHjf2vlNIV67ib7JhStDaHtLzKPa%2Ff2nu%2B4GH6HVdMx%2FWtWeZl7FJklBdWxfnj%2Brebw%2FEAwgoPDdMSBZxvVooRLv2y1yjuHRXzexejUGDlr%2Ft%2BLIjw8oQPvxg5p7bh%2BFbQ%3D&pvid=10_61.144.173.32_459_1521863701855" target="_blank">
-<img src="chi.jpg" height="200px" width="200px" alt="chi"  />
-<br>
-蛋白质吃不够怎么办？点击购买MyProtein蛋白粉！
-</a>
-<br>
+</div>
+</div>
+</div>
 </body>
 </html>

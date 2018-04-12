@@ -21,9 +21,28 @@
     enable_page_level_ads: true
   });
 </script>
-</head>
 
+</head>
+<style  type="text/css">
+.firstRow {
+    display:flex;
+    flex-direction:row;
+}
+
+.formDiv{
+	width:700px;
+}
+.wechatApp{
+	
+}
+.ad{
+	
+}
+</style>
 <body>
+<div class="firstRow">
+<div >
+<div class="formDiv">
 您的基础代谢率为:
 <c:out value="${basic}"></c:out>
 kcal
@@ -49,16 +68,23 @@ g
 
 <button onclick=window.history.back(-1); >返回</button>
 <br>
-<a href="https://s.click.taobao.com/t?e=m%3D2%26s%3Dad5L09RxJgMcQipKwQzePOeEDrYVVa64LKpWJ%2Bin0XLjf2vlNIV67ugYC5em%2F54BtTN3K9waqqi4GH6HVdMx%2FWtWeZl7FJklBdWxfnj%2BreaBTYCbwLzTPFgTPJ9MUNmKTDSQvcCaVEfmAClNJkpsC1b%2BaLjFfQNt%2BCYs4zVhARw%3D&pvid=10_121.35.180.236_584_1513048639919" target="_blank">
+</div>
+<div class="ad">
+<a href="https://s.click.taobao.com/t?e=m%3D2%26s%3DT71%2Bv9ohAfIcQipKwQzePOeEDrYVVa64K7Vc7tFgwiHjf2vlNIV67ib7JhStDaHtLzKPa%2Ff2nu%2B4GH6HVdMx%2FWtWeZl7FJklBdWxfnj%2Brebw%2FEAwgoPDdMSBZxvVooRLv2y1yjuHRXzexejUGDlr%2Ft%2BLIjw8oQPvxg5p7bh%2BFbQ%3D&pvid=10_61.144.173.32_459_1521863701855" target="_blank">
 <img src="../chi.jpg" height="200px" width="200px" alt="chi" />
 <br>
-蛋白质吃不够谁来凑？点击购买即食鸡胸肉，增肌减脂不是梦！
+蛋白质吃不够怎么办？点击购买MyProtein蛋白粉！
 </a>
 <br>
+</div>
+</div>
+<div class="wechatApp">
 <br>
 我在微信小程序上也做了一个类似的应用欢迎使用
 <br/>
 名字叫 热量摄入计算器<br>
 <img src="../lego.jpg"  />
+</div>
+</div>
 </body>
 </html>
