@@ -122,12 +122,7 @@ public class CaloryController {
 	        ui.setAerobic(Integer.parseInt(aerobic));
 	        ui.setGoals(goals);
 	        ui.setEnergy(Integer.parseInt(energy));
-	        if(uiService.userExist(openid)) {
-	        	uiService.updateUser(ui);
-	        }
-	        else {
-	        	uiService.addUser(ui);
-	        }
+	        uiService.addUser(ui);
 	        Integer basic =null;
 	        Integer need=null;
 	        Integer prot =null;
