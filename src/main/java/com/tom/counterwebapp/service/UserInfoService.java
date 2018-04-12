@@ -36,8 +36,8 @@ public class UserInfoService implements IUserInfoService{
 	}
 
 	@Override
-	public UserInfo selectByOpenid(String openid) throws Exception {
-		UserInfo ui = uiDAO.get(openid);
+	public List<UserInfo> selectByOpenid(String openid) throws Exception {
+		List<UserInfo> ui = uiDAO.get(openid);
 		return ui;
 	}
 	
@@ -53,6 +53,7 @@ public class UserInfoService implements IUserInfoService{
     	List<UserInfo> ls = uiDAO.query();
     	return ls;
     }
+    /*
     @Override
 	public boolean userExist(String openid) throws Exception {
 		// TODO Auto-generated method stub
@@ -63,7 +64,7 @@ public class UserInfoService implements IUserInfoService{
 		return true;
     	}
 	}
-
+*/
     
     @Override
 	public Advertisement getAd(String id) throws Exception {

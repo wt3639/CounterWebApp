@@ -1,6 +1,10 @@
 package com.tom.counterwebapp.controller;
 
 import java.io.FileReader;
+import java.util.HashMap;
+import java.util.LinkedHashSet;
+import java.util.List;
+import java.util.Map;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
@@ -198,6 +202,17 @@ public class CaloryController {
 	    	advertisement.setUpdateFlag(ad2.getUpdateFlag());
 	    	advertisement.setText(ad2.getText());
 	    	return advertisement;
+	    	
+	    }
+	    
+	    @RequestMapping(value="/getHistory",method={RequestMethod.GET})  
+	    @ResponseBody
+	    public Map<String, Object> toHistory(HttpServletRequest request) throws Exception{ 
+	    	Map<String,Object> modelMap = new HashMap<String,Object>();
+	    	String id = request.getParameter("id");
+	    	List<UserInfo> uiList = uiService.selectByOpenid(id);
+	    	modelMap.put("userList", uiList);
+	    	return modelMap;
 	    	
 	    }
 	    

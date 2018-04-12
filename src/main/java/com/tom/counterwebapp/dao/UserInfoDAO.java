@@ -10,7 +10,7 @@ public interface UserInfoDAO {
 
 	public int updateUser(UserInfo ui) throws Exception;
 	
-	public UserInfo get(String openid) throws Exception;
+	public List<UserInfo> get(String openid) throws Exception;
 	
 	public int delUser(String openid) throws Exception;
 	
