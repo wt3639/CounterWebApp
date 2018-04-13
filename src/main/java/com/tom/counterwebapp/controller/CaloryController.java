@@ -53,7 +53,7 @@ public class CaloryController {
 	        ui.setRegion("unknown");
 	        ui.setSex(sex);
 	        ui.setHeight(Integer.parseInt(height));
-	        ui.setWeight(Integer.parseInt(weight));
+	        ui.setWeight(Float.parseFloat(weight));
 	        ui.setAge(Integer.parseInt(age));
 	        ui.setSportIndex(Float.parseFloat(sportIndex));
 	        ui.setAerobic(Integer.parseInt(aerobic));
@@ -68,10 +68,10 @@ public class CaloryController {
 	        Integer cab =null;
 	        if(sex.equals("male")){
 	         
-	             basic = (int) (90 + 4.8* Integer.parseInt(height) + 13.4* Integer.parseInt(weight) - 5.7* Integer.parseInt(age));
+	             basic = (int) (90 + 4.8* Integer.parseInt(height) + 13.4* Float.parseFloat(weight) - 5.7* Integer.parseInt(age));
 	        }
 	        else {
-	             basic = (int) ( 450 + 3.1* Integer.parseInt(height) + 9.2* Integer.parseInt(weight) - 4.3* Integer.parseInt(age));      
+	             basic = (int) ( 450 + 3.1* Integer.parseInt(height) + 9.2* Float.parseFloat(weight) - 4.3* Integer.parseInt(age));      
 	        }	       
 	        Integer total =(int) (basic * Float.parseFloat(sportIndex)+Integer.parseInt(aerobic));	         
 	            if(goals.equals("muscle")){
@@ -81,7 +81,7 @@ public class CaloryController {
 	                 cab =  ((need - prot*4 -fat*9)/4);
 	            }else{
 	                 need =  ( total - Integer.parseInt(energy));
-	                 prot = (int) ( 2.75 * Integer.parseInt(weight));
+	                 prot = (int) ( 2.75 * Float.parseFloat(weight));
 	                 fat = (int) ( need * 0.2 / 9) ;
 	                 cab =  ((need - prot*4 -fat*9)/4);
 	               }                
@@ -120,7 +120,7 @@ public class CaloryController {
 	        ui.setRegion(region);
 	        ui.setSex(sex);
 	        ui.setHeight(Integer.parseInt(height));
-	        ui.setWeight(Integer.parseInt(weight));
+	        ui.setWeight(Float.parseFloat(weight));
 	        ui.setAge(Integer.parseInt(age));
 	        ui.setSportIndex(Float.parseFloat(sportIndex));
 	        ui.setAerobic(Integer.parseInt(aerobic));
@@ -134,10 +134,10 @@ public class CaloryController {
 	        Integer cab =null;
 	        if(sex.equals("male")){
 	         
-	             basic = (int) (90 + 4.8* Integer.parseInt(height) + 13.4* Integer.parseInt(weight) - 5.7* Integer.parseInt(age));
+	             basic = (int) (90 + 4.8* Integer.parseInt(height) + 13.4* Float.parseFloat(weight) - 5.7* Integer.parseInt(age));
 	        }
 	        else {
-	             basic = (int) ( 450 + 3.1* Integer.parseInt(height) + 9.2* Integer.parseInt(weight) - 4.3* Integer.parseInt(age));      
+	             basic = (int) ( 450 + 3.1* Integer.parseInt(height) + 9.2* Float.parseFloat(weight) - 4.3* Integer.parseInt(age));      
 	        }	       
 	        Integer total =(int) (basic * Float.parseFloat(sportIndex)+Integer.parseInt(aerobic));	         
 	            if(goals.equals("muscle")){
@@ -147,7 +147,7 @@ public class CaloryController {
 	                 cab =  ((need - prot*4 -fat*9)/4);
 	            }else{
 	                 need =  ( total - Integer.parseInt(energy));
-	                 prot = (int) ( 2.75 * Integer.parseInt(weight));
+	                 prot = (int) ( 2.75 * Float.parseFloat(weight));
 	                 fat = (int) ( need * 0.2 / 9) ;
 	                 cab =  ((need - prot*4 -fat*9)/4);
 	               }                

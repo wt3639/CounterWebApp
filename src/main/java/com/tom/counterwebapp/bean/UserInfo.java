@@ -9,7 +9,7 @@ public class UserInfo implements Serializable  {
 	private String nickname;
 	private String region;
 	private Integer height;
-	private Integer weight;
+	private Float weight;
 	private Integer age;
 	private Float sportIndex;
 	private Integer aerobic;
@@ -23,7 +23,7 @@ public class UserInfo implements Serializable  {
 
 
 
-	public UserInfo(String openid, String sex, String nickname, String region, Integer height, Integer weight,
+	public UserInfo(String openid, String sex, String nickname, String region, Integer height, Float weight,
 			Integer age, Float sportIndex, Integer aerobic, String goals, Integer energy, Long update_at,
 			Long create_at) {
 		super();
@@ -83,10 +83,10 @@ public class UserInfo implements Serializable  {
 	public void setHeight(Integer height) {
 		this.height = height;
 	}
-	public Integer getWeight() {
+	public Float getWeight() {
 		return weight;
 	}
-	public void setWeight(Integer weight) {
+	public void setWeight(Float weight) {
 		this.weight = weight;
 	}
 	public Integer getAge() {
