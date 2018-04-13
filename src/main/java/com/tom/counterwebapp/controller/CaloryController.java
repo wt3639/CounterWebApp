@@ -127,7 +127,7 @@ public class CaloryController {
 	        ui.setAerobic(Integer.parseInt(aerobic));
 	        ui.setGoals(goals);
 	        ui.setEnergy(Integer.parseInt(energy));
-	        if(uiService.selectByOpenid(openid).get(0).getCreate_at().equals(Math.round(new Date().getTime()/1000d))==true){
+	        if(Math.round(uiService.selectByOpenid(openid).get(0).getCreate_at()/86400)==Math.round(new Date().getTime()/86400000)){
 	        	uiService.updateUser(ui);
 	        }else{
 	            uiService.addUser(ui);
