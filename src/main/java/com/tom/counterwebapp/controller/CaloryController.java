@@ -1,6 +1,7 @@
 package com.tom.counterwebapp.controller;
 
 import java.io.FileReader;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.LinkedHashSet;
 import java.util.List;
@@ -126,7 +127,11 @@ public class CaloryController {
 	        ui.setAerobic(Integer.parseInt(aerobic));
 	        ui.setGoals(goals);
 	        ui.setEnergy(Integer.parseInt(energy));
-	        uiService.addUser(ui);
+	        if(Math.round(new Date().getTime()/1000)== uiService.selectByOpenid(openid).get(0).getCreate_at()){
+	        	uiService.updateUser(ui);
+	        }else{
+	            uiService.addUser(ui);
+	        }
 	        Integer basic =null;
 	        Integer need=null;
 	        Integer prot =null;

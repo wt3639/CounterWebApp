@@ -25,8 +25,8 @@
 </insert>
 
 <update id="updateUser" parameterType="com.tom.counterwebapp.bean.UserInfo">
-  update calories set
-  	nickname = #{nickname},
+update calories set
+	nickname = #{nickname},
   	region = #{region},
     sex=#{sex},
     height=#{height},
@@ -37,7 +37,10 @@
     goals=#{goals},
     energy=#{energy},
     update_at=unix_timestamp(now())
-  where openid = #{openid}
+ where NO=(
+ select a.NO from(
+ select * from calories where openid = #{openid} order by create_at desc limit 1)a
+ );
 </update>
 
 <delete id="delUser" parameterType="string">
