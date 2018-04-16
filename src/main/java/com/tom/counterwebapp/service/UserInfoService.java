@@ -1,5 +1,6 @@
 package com.tom.counterwebapp.service;
 
+import java.util.Date;
 import java.util.List;
 
 import javax.annotation.Resource;
@@ -65,6 +66,24 @@ public class UserInfoService implements IUserInfoService{
     	}
 	}
 */
+   @Override
+    public boolean InsertUserByDay(UserInfo ui) throws Exception {
+	   int result;
+	   if(Math.round(uiDAO.get(ui.getOpenid()).get(0).getCreate_at()/86400)==Math.round(new Date().getTime()/86400000)){
+      	  result = uiDAO.updateUser(ui);
+      	 
+      }else{
+         result=uiDAO.addUser(ui);
+         
+      }
+	   if(result>0){
+		   return true;
+	   }else{
+		   return false;
+	   }
+	   
+    	
+    }
     
     @Override
 	public Advertisement getAd(String id) throws Exception {

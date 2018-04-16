@@ -13,5 +13,6 @@ public interface IUserInfoService {
 	public boolean delUser(String openid) throws Exception;
     public List<UserInfo> selectAll() throws Exception ;
     //public boolean userExist(String openid) throws Exception;
+    public boolean InsertUserByDay(UserInfo ui) throws Exception;
     public Advertisement getAd(String id) throws Exception;
 }
