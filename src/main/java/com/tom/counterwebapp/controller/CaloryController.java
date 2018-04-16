@@ -100,8 +100,9 @@ public class CaloryController {
 	    
 	    @RequestMapping(value="/getjson",method={RequestMethod.GET})  
 	    @ResponseBody
-	    public RespondResult toJson(HttpServletRequest request) throws Exception{  
-	    	RespondResult rr = new RespondResult();
+	    public Map<String, Object> toJson(HttpServletRequest request) throws Exception{  
+	    	Map<String,Object> modelMap = new HashMap<String,Object>();
+	    	int result=0;
 	    	String openid = request.getParameter("openid");
 	    	String nickname = request.getParameter("nickname");
 	    	String region = request.getParameter("region");
@@ -128,41 +129,12 @@ public class CaloryController {
 	        ui.setGoals(goals);
 	        ui.setEnergy(Integer.parseInt(energy));
 	        if(Math.round(uiService.selectByOpenid(openid).get(0).getCreate_at()/86400)==Math.round(new Date().getTime()/86400000)){
-	        	uiService.updateUser(ui);
+	        	 uiService.updateUser(ui);
 	        }else{
-	            uiService.addUser(ui);
+	            result = uiService.addUser(ui);
 	        }
-	        Integer basic =null;
-	        Integer need=null;
-	        Integer prot =null;
-	        Integer fat =null;
-	        Integer cab =null;
-	        if(sex.equals("male")){
-	         
-	             basic = (int) (90 + 4.8* Integer.parseInt(height) + 13.4* Float.parseFloat(weight) - 5.7* Integer.parseInt(age));
-	        }
-	        else {
-	             basic = (int) ( 450 + 3.1* Integer.parseInt(height) + 9.2* Float.parseFloat(weight) - 4.3* Integer.parseInt(age));      
-	        }	       
-	        Integer total =(int) (basic * Float.parseFloat(sportIndex)+Integer.parseInt(aerobic));	         
-	            if(goals.equals("muscle")){
-	                 need = ( total + Integer.parseInt(energy));
-	                 prot =(int) ( 2.2 * Integer.parseInt(weight));
-	                 fat =  (int) (need * 0.25 / 9 );
-	                 cab =  ((need - prot*4 -fat*9)/4);
-	            }else{
-	                 need =  ( total - Integer.parseInt(energy));
-	                 prot = (int) ( 2.75 * Float.parseFloat(weight));
-	                 fat = (int) ( need * 0.2 / 9) ;
-	                 cab =  ((need - prot*4 -fat*9)/4);
-	               }                
-	        rr.setBasic(basic);  	        
-	        rr.setCab(cab);
-	        rr.setFat(fat);
-	        rr.setNeed(need);
-	        rr.setProt(prot);
-	        rr.setTotal(total);
-	        return rr;  
+	        modelMap.put("success", result);     
+	        return modelMap;  
 	    }
 	    
 	    
