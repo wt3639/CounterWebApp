@@ -9,7 +9,7 @@
     age,sportindex,aerobic,goals,energy,update_at,create_at
     from calories where openid = #{openid}
     order by update_at
-    desc
+    asc
   </select>
   
   <select id="query" resultType="com.tom.counterwebapp.bean.UserInfo">
