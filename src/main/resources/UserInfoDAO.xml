@@ -12,6 +12,14 @@
     asc
   </select>
   
+    <select id="getNewest" parameterType="string" resultType="com.tom.counterwebapp.bean.UserInfo">
+    select openid,nickname,region,sex,height,weight,
+    age,sportindex,aerobic,goals,energy,update_at,create_at
+    from calories where openid = #{openid} 
+    order by update_at
+    desc limit 1
+  </select>
+  
   <select id="query" resultType="com.tom.counterwebapp.bean.UserInfo">
   select *
   from calories

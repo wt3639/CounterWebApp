@@ -12,6 +12,8 @@ public interface UserInfoDAO {
 	
 	public List<UserInfo> get(String openid) throws Exception;
 	
+	public UserInfo getNewest(String openid) throws Exception;
+	
 	public int delUser(String openid) throws Exception;
 	
     public List<UserInfo> query() throws Exception ;
