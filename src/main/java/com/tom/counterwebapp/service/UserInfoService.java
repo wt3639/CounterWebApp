@@ -69,7 +69,7 @@ public class UserInfoService implements IUserInfoService{
    @Override
     public boolean InsertUserByDay(UserInfo ui) throws Exception {
 	   int result;
-	   if(Math.round(uiDAO.getNewest(ui.getOpenid()).getCreate_at()/86400)==Math.round(new Date().getTime()/86400000)){
+	   if(uiDAO.getNewest(ui.getOpenid())!=null&&Math.round(uiDAO.getNewest(ui.getOpenid()).getCreate_at()/86400)==Math.round(new Date().getTime()/86400000)){
       	  result = uiDAO.updateUser(ui);
       	 
       }else{
